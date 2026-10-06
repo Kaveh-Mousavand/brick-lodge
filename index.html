@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brick Lodge — Kaveh Mousavand</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner" id="topnav-inner">
+    <a class="brand" href="https://kaveh-mousavand.github.io/">Kaveh Mousavand</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <ul class="navlinks">
+      <li><a href="https://kaveh-mousavand.github.io/">Home</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/research.html">Research &amp; Events</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/misc.html">Miscellaneous</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/fdb-applet.html">FDB Applet</a></li>
+      <li><a href="index.html" class="active">Brick Lodge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="shell">
+  <aside class="sidebar">
+    <img class="avatar" src="assets/images/profile.jpg" alt="Kaveh Mousavand">
+    <h2>Kaveh Mousavand</h2>
+    <p class="field">Mathematician</p>
+    <p class="role">Staff Scientist</p>
+    <p class="org"><a href="https://www.oist.jp/" target="_blank" rel="noopener noreferrer">OIST, Okinawa, Japan</a></p>
+    <ul class="sidebar-links">
+      <li><a href="https://scholar.google.com/citations?user=8kGHQqMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/mousavand_k_1" target="_blank" rel="noopener noreferrer">arXiv</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/research-statement.pdf" target="_blank" rel="noopener noreferrer">Research statement</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h1>Brick Lodge</h1>
+    <p class="subtitle">A repository for recent developments on bricks</p>
+
+    <p class="section-label">Introduction:</p>
+    <p>This repository is devoted to recent developments in the study of bricks in representation theory of algebras and related areas. It aims to serve as a growing collection of important results and developments from recent years, as well as a space for sharing new results, observations and examples, posing open problems and questions, and exchanging ideas. The hope is that it will provide a useful resource for researchers working on bricks and related topics, and help foster further developments and connections within the subject. Those who wish to contribute to the repository are kindly invited to get in touch with <a href="https://kaveh-mousavand.github.io/">Kaveh Mousavand</a>.</p>
+
+    <ul class="brick-list">
+      <li><a class="brick-item" href="open-conjectures.html" target="_blank" rel="noopener noreferrer">A. Open Conjectures</a></li>
+      <li><a class="brick-item" href="open-questions.html" target="_blank" rel="noopener noreferrer">B. Open Questions</a></li>
+      <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
+      <li><button type="button" class="brick-item" data-modal="observations">D. Observations</button></li>
+    </ul>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box" id="modal-box">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  © 2026 Kaveh Mousavand. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+</footer>
+
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('topnav-inner').classList.toggle('open');
+});
+
+// Brick Lodge popups for C/D. "A. Open Conjectures" and "B. Open Questions"
+// are now their own pages (open-conjectures.html, open-questions.html). To
+// add content later, just edit the "body" string for the relevant key below.
+const brickLodgeContent = {
+  results: {
+    title: "C. New Results",
+    body: "<p>Content coming soon.</p>"
+  },
+  observations: {
+    title: "D. Observations",
+    body: "<p>Content coming soon.</p>"
+  }
+};
+
+const modalOverlay = document.getElementById('modal-overlay');
+const modalTitle = document.getElementById('modal-title');
+const modalBody = document.getElementById('modal-body');
+
+document.querySelectorAll('.brick-item[data-modal]').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const key = btn.getAttribute('data-modal');
+    const entry = brickLodgeContent[key];
+    if (!entry) return;
+    modalTitle.textContent = entry.title;
+    modalBody.innerHTML = entry.body;
+    modalOverlay.classList.add('open');
+  });
+});
+
+function closeBrickModal() {
+  modalOverlay.classList.remove('open');
+}
+document.getElementById('modal-close').addEventListener('click', closeBrickModal);
+modalOverlay.addEventListener('click', function(e) {
+  if (e.target === modalOverlay) closeBrickModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeBrickModal();
+});
+</script>
+</body>
+</html>

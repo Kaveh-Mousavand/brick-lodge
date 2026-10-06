@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Questions on Bricks — Kaveh Mousavand</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner" id="topnav-inner">
+    <a class="brand" href="https://kaveh-mousavand.github.io/">Kaveh Mousavand</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <ul class="navlinks">
+      <li><a href="https://kaveh-mousavand.github.io/">Home</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/research.html">Research &amp; Events</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/misc.html">Miscellaneous</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/fdb-applet.html">FDB Applet</a></li>
+      <li><a href="index.html" class="active">Brick Lodge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="shell">
+  <aside class="sidebar">
+    <img class="avatar" src="assets/images/profile.jpg" alt="Kaveh Mousavand">
+    <h2>Kaveh Mousavand</h2>
+    <p class="field">Mathematician</p>
+    <p class="role">Staff Scientist</p>
+    <p class="org"><a href="https://www.oist.jp/" target="_blank" rel="noopener noreferrer">OIST, Okinawa, Japan</a></p>
+    <ul class="sidebar-links">
+      <li><a href="https://scholar.google.com/citations?user=8kGHQqMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/mousavand_k_1" target="_blank" rel="noopener noreferrer">arXiv</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/research-statement.pdf" target="_blank" rel="noopener noreferrer">Research statement</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <a class="back-link" href="index.html">&larr; Back to Brick Lodge</a>
+    <h1>Open Questions</h1>
+    <p class="subtitle">on bricks in representation theory of algebras</p>
+
+    <p class="conjectures-intro"><strong>Setting:</strong> Throughout, <em>k</em> is an algebraically closed field and <em>A = kQ/I</em> is a basic, connected, finite-dimensional associative <em>k</em>-algebra. An <em>A</em>-module <em>M</em> is a brick if End<sub>A</sub>(M) is a division algebra (equivalently, End<sub>A</sub>(M) &cong; <em>k</em>); <em>A</em> is brick-infinite if it has infinitely many isomorphism classes of bricks. The questions below are listed in the chronological order of their first appearance in the literature (by arXiv date, or thesis date where no arXiv preprint exists), or communicated to us directly, and are — to the best of current knowledge — still open in general.</p>
+
+    <!-- 1 -->
+    <div class="conjecture-card">
+      <h3>1. Do the modern notions of "tameness" for bricks coincide?</h3>
+      <p class="conjecture-meta">K. Mousavand, C. Paquette — Figure 2, arXiv: 2025 &nbsp;·&nbsp; <a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">arXiv:2508.11789</a></p>
+      <p class="conjecture-setting"><strong>Setting:</strong> an algebra can be brick-tame, g-tame, E-tame, or stably-tame — four related but a priori distinct geometric/combinatorial notions of tameness built around the behavior of bricks (see Section 7 of the survey for precise definitions).</p>
+      <p class="conjecture-statement">With the same setting and notation as above, do brick-tameness, g-tameness, E-tameness, and stably-tameness all coincide with one another for arbitrary finite-dimensional algebras?</p>
+      <button type="button" class="info-toggle" aria-expanded="false" data-target="q-info-1">More information <span class="chev">&#9662;</span></button>
+      <div class="info-panel" id="q-info-1" hidden>
+        <p>Raised implicitly in Mousavand–Paquette's 2025 survey, where Figure 2 depicts the known implications among these four notions of tameness as solid arrows, and the unknown (open) implications as dotted arrows. Every tame algebra is known to be g-tame and brick-tame, but the reverse implications, and the relationships among g-tame, E-tame, and stably-tame algebras in general, are open.</p>
+        <p><strong>Recent developments:</strong> Haerizadeh–Yurikusa (2025) proved that g-tameness and E-tameness coincide for the restricted family of tame Jacobian algebras, giving a first positive data point, but the question remains open for general algebras.</p>
+        <p class="topics-label">Related topics</p>
+        <ul class="topic-list">
+          <li><a href="https://arxiv.org/abs/2507.04570" target="_blank" rel="noopener noreferrer">Tame Jacobian algebras</a></li>
+          <li><a href="https://arxiv.org/abs/1503.00285" target="_blank" rel="noopener noreferrer">g-vector fans</a></li>
+          <li><a href="open-conjectures.html">Stability Conjecture</a></li>
+          <li><a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">Bricks — a survey</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="conjecture-card">
+      <h3>2. No-gap phenomenon for bricks</h3>
+      <p class="conjecture-meta">K. Mousavand — 2026 (communicated directly; no arXiv preprint yet)</p>
+      <p class="conjecture-setting"><strong>Setting:</strong> <em>A</em> is representation-finite, hence necessarily brick-finite; the dimension of a brick <em>X</em> is its dimension as a <em>k</em>-vector space.</p>
+      <p class="conjecture-statement">With the same setting and notation as above, if <em>A</em> is representation-finite, is there no gap in the dimension of bricks? That is, if <em>A</em> admits a brick of dimension <em>d</em> &gt; 1, does it necessarily admit a brick of dimension <em>d</em> &minus; 1?</p>
+      <button type="button" class="info-toggle" aria-expanded="false" data-target="q-info-2">More information <span class="chev">&#9662;</span></button>
+      <div class="info-panel" id="q-info-2" hidden>
+        <p>Based on some partial results and affirmative answer for several families of algebras, the above question is openly shared by Kaveh Mousavand in September 2026 and does not yet have an arXiv preprint. The question is related (but fundamentally different from) a classical "no-gap" phenomenon for indecomposable modules, proved by Klaus Bongartz: for a representation-infinite algebra, if there is an indecomposable module of length <em>n</em>, then there is one of length <em>n</em> &minus; 1 for every smaller <em>n</em> down to 1 (an alternative proof was later given by Ringel). The brick question asks for an analogous "no-gap" statement, but in the opposite regime — for representation-finite algebras — and for bricks specifically rather than all indecomposables. Notably, there exist brick-finite algebras with gaps in the dimension of their bricks. Also, as assumed in the above setting, basicness of the algebra is a necessary assumption.</p>
+        <p class="topics-label">Related topics</p>
+        <ul class="topic-list">
+          <li><a href="https://arxiv.org/abs/0904.4609" target="_blank" rel="noopener noreferrer">Bongartz: indecomposables live in all smaller lengths</a></li>
+          <li><a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">Bricks — a survey</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="conjecture-card">
+      <h3>3. Rigid semibricks</h3>
+      <p class="conjecture-meta">K. Mousavand, C. Paquette — 2026 (communicated directly; no arXiv preprint yet)</p>
+      <p class="conjecture-setting"><strong>Setting:</strong> a semibrick is a set of pairwise Hom-orthogonal bricks; a module <em>X</em> is rigid if Ext<sup>1</sup><sub>A</sub>(X, X) = 0. Here 𝕊 = {M<sub>i</sub>}<sub>i&isin;&#8484;</sub> denotes an infinite semibrick.</p>
+      <p class="conjecture-statement">With the same setting and notation as above,<br><br>(1) does there exist an algebra <em>A</em> which admits an infinite semibrick 𝕊 = {M<sub>i</sub>}<sub>i&isin;&#8484;</sub> consisting entirely of rigid bricks?<br><br>(2) If the answer to part (1) is affirmative, must <em>A</em> necessarily be (strictly) wild?</p>
+      <button type="button" class="info-toggle" aria-expanded="false" data-target="q-info-3">More information <span class="chev">&#9662;</span></button>
+      <div class="info-panel" id="q-info-3" hidden>
+        <p>This two-part question was communicated directly by Kaveh Mousavand and Charles Paquette in 2026 and does not yet have an arXiv preprint. It sharpens the Semibrick Conjecture (see item 4 on the <a href="open-conjectures.html">Open Conjectures</a> page) by additionally requiring every member of the infinite semibrick to be individually rigid, and directly generalizes the MathOverflow question linked below, which asks the same for a single infinite semibrick (rather than existence over some algebra) and was posed by Kaveh Mousavand.</p>
+        <p><strong>Recent developments:</strong> in the brand-new (June 2026) paper "Brick infinite algebras admit infinitely many non-τ-rigid bricks," Mousavand–Paquette prove that every strictly wild algebra admits infinitely many bricks of the same dimension vector (Proposition 3.1), which is suggestive evidence toward part (2). The same paper also shows that if <em>A</em> is <em>not</em> strictly wild, every infinite semibrick contains an infinite sub-semibrick consisting of pairwise Ext<sup>1</sup>-orthogonal bricks (Proposition 3.2) — a weaker, pairwise form of rigidity between distinct members, falling short of each brick being individually rigid. Neither part of the question is settled yet.</p>
+        <p class="topics-label">Related topics</p>
+        <ul class="topic-list">
+          <li><a href="https://arxiv.org/abs/2606.27063" target="_blank" rel="noopener noreferrer">Non-τ-rigid bricks (2026)</a></li>
+          <li><a href="open-conjectures.html">Semibrick Conjecture</a></li>
+          <li><a href="https://mathoverflow.net/questions/513923/infinite-semibrick-consisting-of-rigid-modules" target="_blank" rel="noopener noreferrer">MathOverflow question (below)</a></li>
+          <li><a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">Bricks — a survey</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h2>Related open problems on MathOverflow</h2>
+    <p>A recent, directly related open problem posed on MathOverflow by Kaveh Mousavand:</p>
+    <ul class="link-grid">
+      <li><a href="https://mathoverflow.net/questions/513923/infinite-semibrick-consisting-of-rigid-modules" target="_blank" rel="noopener noreferrer">Infinite semibrick consisting of rigid modules</a> — asks whether a brick-infinite algebra always admits an infinite semibrick all of whose members are rigid modules, sharpening the Semibrick Conjecture (see item 4 on the <a href="open-conjectures.html">Open Conjectures</a> page) by adding a rigidity requirement. This is the single-algebra precursor of question 3 above.</li>
+    </ul>
+    <p>For further related discussions, browse MathOverflow's <a href="https://mathoverflow.net/questions/tagged/rt.representation-theory" target="_blank" rel="noopener noreferrer">representation-theory tag</a>, where new questions on bricks, τ-tilting theory, and torsion classes appear periodically.</p>
+
+    <a class="back-link" href="index.html">&larr; Back to Brick Lodge</a>
+  </main>
+</div>
+
+<footer class="site-footer">
+  © 2026 Kaveh Mousavand. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+</footer>
+
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('topnav-inner').classList.toggle('open');
+});
+
+document.querySelectorAll('.info-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const panel = document.getElementById(btn.getAttribute('data-target'));
+    if (!panel) return;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    if (isOpen) {
+      panel.hidden = true;
+    } else {
+      panel.hidden = false;
+    }
+  });
+});
+</script>
+</body>
+</html>
