@@ -47,7 +47,7 @@
 
     <p class="conjectures-intro tight">Some of the observations below may be AI-assisted, or even entirely AI-generated, under a mathematician&rsquo;s direction. They are shared solely to help build intuition and insight into the open problems of the Brick Lodge and related topics. If you wish to cite or use any of them in a publication or presentation, please contact the contributors directly. Each observation is credited to the person or people who communicated it.</p>
 
-    <p class="conjectures-intro">The Brick Lodge welcomes feedback and comments from all experts on these observations, as well as suggestions for improving their exposition (with credit to the original work). To leave a comment, use the &ldquo;Comments &amp; Feedback&rdquo; link below the relevant observation. Once the maintainer or one of the contributors of the Brick Lodge has reviewed and approved it, your comment will appear beneath that observation under your full name.</p>
+    <p class="conjectures-intro">The Brick Lodge welcomes feedback and comments from all experts on these observations, as well as suggestions for improving their exposition (with credit to the original work). To leave a comment, use the &ldquo;Comments &amp; Feedback&rdquo; button at the bottom right of the relevant observation. Once the maintainer or one of the contributors of the Brick Lodge has reviewed and approved it, your comment will appear beneath that observation under your full name.</p>
 
     <!-- 1 -->
     <div class="conjecture-card" id="obs-1">
@@ -55,9 +55,22 @@
       <p class="conjecture-meta">Example communicated by H. Enomoto, constructed with AI (OpenAI Codex, GPT-6) &mdash; October 2026 (no arXiv preprint) &nbsp;&middot;&nbsp; <a href="assets/docs/enomoto-infinite-semibrick-of-rigid-modules.pdf" target="_blank" rel="noopener noreferrer">Note (PDF)</a></p>
       <p class="conjecture-setting"><strong>Setting:</strong> <em>k</em> is an algebraically closed field of characteristic zero, and <em>A</em> is a finite-dimensional <em>k</em>-algebra. A semibrick is a set of pairwise Hom-orthogonal bricks, and a brick <em>X</em> is rigid if Ext<sup>1</sup><sub>A</sub>(<em>X</em>, <em>X</em>) = 0. A semibrick 𝕊 consists of <em>pairwise extension-orthogonal rigid bricks</em> if Ext<sup>1</sup><sub>A</sub>(<em>X</em>, <em>Y</em>) = 0 for all <em>X</em>, <em>Y</em> &isin; 𝕊, including the case <em>X</em> = <em>Y</em>.</p>
       <p class="conjecture-statement">A finite-dimensional algebra can admit an infinite semibrick of pairwise extension-orthogonal rigid bricks.</p>
-      <button type="button" class="info-toggle" aria-expanded="false" data-target="o-info-1">More information <span class="chev">&#9662;</span></button>
+      <div class="card-actions">
+        <button type="button" class="info-toggle" aria-expanded="false" data-target="o-info-1" data-group="obs-1">More information <span class="chev">&#9662;</span></button>
+        <button type="button" class="info-toggle comments-toggle" aria-expanded="false" data-target="o-comments-1" data-group="obs-1" data-obs="obs-1"><span class="comments-label">Comments &amp; Feedback</span> <span class="chev">&#9662;</span></button>
+      </div>
+      <div class="info-panel comments-panel" id="o-comments-1" data-obs="obs-1" hidden>
+        <div class="comments-inactive">
+          <p>The comment form has not been activated yet. Please check back soon, or contact <a href="https://kaveh-mousavand.github.io/" target="_blank" rel="noopener noreferrer">Kaveh Mousavand</a> directly.</p>
+        </div>
+        <div class="comments-active" hidden>
+          <div class="approved-comments"></div>
+          <p class="comments-status"></p>
+          <p><a class="btn" href="feedback.html?obs=obs-1">Leave a comment or feedback &rarr;</a></p>
+        </div>
+      </div>
       <div class="info-panel" id="o-info-1" hidden>
-        <p><strong>Credit, background and motivation.</strong> This example was communicated to us by <a href="https://haruhisa-enomoto.github.io/" target="_blank" rel="noopener noreferrer">Haruhisa Enomoto</a>, to whom we are grateful, in October 2026 (the attached note is dated October 4, 2026). Semibricks, which are in bijection with wide subcategories, are at the heart of the brick-Brauer&ndash;Thrall conjectures: the Semibrick Conjecture of Enomoto (<a href="https://arxiv.org/abs/2005.01626" target="_blank" rel="noopener noreferrer">arXiv:2005.01626</a>) predicts that an algebra is brick-infinite if and only if it admits an infinite semibrick. It is natural to ask how well-behaved such a semibrick can be made. In <a href="https://arxiv.org/abs/2606.27063" target="_blank" rel="noopener noreferrer">arXiv:2606.27063</a> Mousavand&ndash;Paquette asked (Question 4.2) whether, over a fixed algebra, a semibrick of pairwise extension-orthogonal rigid bricks is necessarily finite and, if so, whether its cardinality is bounded in terms of the algebra. Their Example 4.1 produces finite such semibricks of arbitrarily large cardinality, but only by changing the algebra each time, and their argument (based on <a href="https://arxiv.org/abs/1210.1036" target="_blank" rel="noopener noreferrer">&tau;-tilting theory</a>) shows that an algebra with an infinite such semibrick must have global dimension at least two. In particular, it negatively answers the Question 4.2 of <a href="https://arxiv.org/abs/2606.27063" target="_blank" rel="noopener noreferrer">arXiv:2606.27063</a>.</p>
+        <p><strong>Credit, background and motivation.</strong> This example was communicated to us by <a href="https://haruhisa-enomoto.github.io/" target="_blank" rel="noopener noreferrer">Haruhisa Enomoto</a>, to whom we are grateful, in October 2026 (the attached note is dated October 4, 2026). Semibricks, which are in bijection with wide subcategories, are at the heart of the brick-Brauer&ndash;Thrall conjectures: the Semibrick Conjecture of Enomoto (<a href="https://arxiv.org/abs/2005.01626" target="_blank" rel="noopener noreferrer">arXiv:2005.01626</a>) predicts that an algebra is brick-infinite if and only if it admits an infinite semibrick. It is natural to ask how well-behaved such a semibrick can be made. In <a href="https://arxiv.org/abs/2606.27063" target="_blank" rel="noopener noreferrer">arXiv:2606.27063</a> Mousavand&ndash;Paquette asked (Question 4.2) whether, over a fixed algebra, a semibrick of pairwise extension-orthogonal rigid bricks is necessarily finite and, if so, whether its cardinality is bounded in terms of the algebra. Their Example 4.1 produces finite such semibricks of arbitrarily large cardinality, but only by changing the algebra each time, and their argument (based on <a href="https://arxiv.org/abs/1210.1036" target="_blank" rel="noopener noreferrer">&tau;-tilting theory</a>) shows that an algebra with an infinite such semibrick must have global dimension at least two.</p>
         <p class="main-result"><strong>Main result.</strong> Over an algebraically closed field of characteristic zero, there is a connected basic algebra &Lambda; with three simple modules, of dimension 21, with (rad &Lambda;)<sup>3</sup> = 0 and global dimension 2 (the least possible), together with modules <em>B</em><sub>n</sub> (<em>n</em> &ge; 0) of dimension vector (<em>n</em>+1, <em>n</em>+1, <em>n</em>+1) such that Hom<sub>&Lambda;</sub>(<em>B</em><sub>m</sub>, <em>B</em><sub>n</sub>) is <em>k</em> if <em>m</em> = <em>n</em> and 0 otherwise, and Ext<sup>1</sup><sub>&Lambda;</sub>(<em>B</em><sub>m</sub>, <em>B</em><sub>n</sub>) = 0 for all <em>m</em>, <em>n</em> &ge; 0. Hence {<em>B</em><sub>n</sub>} is an infinite semibrick of pairwise extension-orthogonal rigid bricks, and over this one algebra even the sizes of finite such semibricks are unbounded. Each <em>B</em><sub>n</sub> has projective dimension exactly 2, and dim Ext<sup>2</sup>(<em>B</em><sub>m</sub>, <em>B</em><sub>n</sub>) = (<em>m</em>+1)(<em>n</em>+1) &minus; &delta;<sub>mn</sub>.</p>
         <p><strong>Construction and AI provenance.</strong> The algebra &Lambda; is an instance of the universal-localization construction of Neeman&ndash;Ranicki&ndash;Schofield (<a href="https://doi.org/10.1017/S030500410300700X" target="_blank" rel="noopener noreferrer">Math. Proc. Cambridge Philos. Soc. 2004</a>), applied to the universal enveloping algebra <em>U</em> of the Lie algebra sl<sub>2</sub>. The finite-dimensional <em>U</em>-modules embed fully and exactly into mod &Lambda; with an extension-closed image (the modules on which two distinguished arrows act invertibly), so Hom and Ext<sup>1</sup> are preserved, and <em>B</em><sub>n</sub> is the image of the (<em>n</em>+1)-dimensional simple sl<sub>2</sub>-module; the required vanishing then reduces to the complete reducibility of sl<sub>2</sub>-modules in characteristic zero. <strong>The example was created by AI:</strong> according to the note, the construction and its proof were developed with OpenAI&rsquo;s <em>Codex</em> agent in research directed by Haruhisa Enomoto, and the manuscript &mdash; a LaTeX/PDF note titled &ldquo;An infinite semibrick of rigid modules&rdquo;, listing &ldquo;Codex (GPT-6)&rdquo; as its author &mdash; was drafted with GPT-6 in Codex. It has not yet been refereed.</p>
         <p class="attachment"><span class="attachment-icon" aria-hidden="true">&#128206;</span> <span><strong>Attached note (PDF):</strong> <a href="assets/docs/enomoto-infinite-semibrick-of-rigid-modules.pdf" target="_blank" rel="noopener noreferrer">An infinite semibrick of rigid modules</a> &mdash; Codex (GPT-6), October 4, 2026; shared by H. Enomoto.</span></p>
@@ -77,10 +90,6 @@
           <li><a href="https://arxiv.org/abs/2508.11789" target="_blank" rel="noopener noreferrer">Bricks &mdash; a survey</a></li>
         </ul>
       </div>
-    </div>
-    <div class="comments-block" data-obs="obs-1">
-      <a class="feedback-link" href="feedback.html?obs=obs-1">&#128172; Comments &amp; Feedback</a>
-      <div class="approved-comments" hidden></div>
     </div>
 
     <a class="back-link" href="index.html">&larr; Back to Brick Lodge</a>
@@ -103,12 +112,18 @@ document.querySelectorAll('.info-toggle').forEach(function(btn) {
     const panel = document.getElementById(btn.getAttribute('data-target'));
     if (!panel) return;
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!isOpen));
-    if (isOpen) {
-      panel.hidden = true;
-    } else {
-      panel.hidden = false;
+    // "More information" and "Comments & Feedback" of the same observation open one at a time.
+    const group = btn.getAttribute('data-group');
+    if (group && !isOpen) {
+      document.querySelectorAll('.info-toggle[data-group="' + group + '"]').forEach(function(other) {
+        if (other === btn) return;
+        other.setAttribute('aria-expanded', 'false');
+        const op = document.getElementById(other.getAttribute('data-target'));
+        if (op) op.hidden = true;
+      });
     }
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    panel.hidden = isOpen;
   });
 });
 </script>

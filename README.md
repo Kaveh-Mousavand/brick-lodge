@@ -49,8 +49,11 @@ its pull request page. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
   Give the drop-down button and its panel a new matching id (for example `info-9`).
 * **A new observation:** copy the card in `observations.html`, paste it below the last one, renumber it,
   and give its drop-down button/panel a new matching id (for example `o-info-2`).
-* **A new observation also needs:** a `<div class="comments-block" data-obs="obs-2">` below its card
-  (copy the one under Observation 1) and one more line in `js/feedback-config.js` giving its title.
+* **A new observation also needs:** its own comments drop-down. Copy the whole card of Observation 1
+  (including the two buttons and both panels), then change `obs-1` to `obs-2` (card id, `data-obs`,
+  `data-group`, the form link `feedback.html?obs=obs-2`), the panel ids `o-info-1`/`o-comments-1` to
+  `o-info-2`/`o-comments-2` (and the matching `data-target`s), and add one line with its title to
+  `js/feedback-config.js`.
 * **Comments & Feedback:** visitors' comments are emailed to the maintainer and contributors and appear
   under the observation only after approval. The service runs in the maintainer's Google account (Apps
   Script); its code is deliberately **not** stored in this public repository.

@@ -590,16 +590,19 @@ footer.site-footer {
   margin: 0 0 14px;
 }
 
-.comments-block { margin: -10px 0 28px 4px; }
-.feedback-link {
-  display: inline-block;
-  font-size: 0.86rem;
-  color: var(--slate-deep);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--slate);
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
-.feedback-link:hover { color: var(--brick); border-bottom-color: var(--brick); }
-.approved-comments { margin-top: 14px; }
+.card-actions .comments-toggle { margin-left: auto; }
+.comments-panel p { margin: 0 0 12px; }
+.comments-status { font-size: 0.9rem; color: var(--ink-soft); }
+.comments-status:empty { display: none; }
+.approved-comments { margin: 0 0 14px; }
+.approved-comments:empty { display: none; }
 .comment-item {
   background: var(--paper-raised);
   border: 1px solid var(--rule);
