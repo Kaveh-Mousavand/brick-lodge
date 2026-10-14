@@ -24,6 +24,12 @@ observations and examples.
 
 The site is plain HTML and CSS. There is nothing to build or install.
 
+## Link convention
+
+Links that stay inside the Brick Lodge (including "Back to Brick Lodge") open in the **same tab**, so
+visitors never end up with several copies of the main page. Links that leave the Brick Lodge (other
+websites, the maintainer's main site, PDFs) open in a **new tab** (`target="_blank" rel="noopener noreferrer"`).
+
 ## How changes are made
 
 Nothing goes live until the maintainer approves it:
