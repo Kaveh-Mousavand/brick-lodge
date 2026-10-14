@@ -419,6 +419,20 @@ h1, h2, h3, h4 {
 .info-panel p { margin: 0 0 12px; }
 .info-panel p:last-of-type { margin-bottom: 12px; }
 
+.info-panel .attachment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--rule-soft);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--brick);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+}
+.attachment-icon { font-size: 1.05rem; line-height: 1.4; }
+
 .topic-list {
   list-style: none;
   padding: 0;

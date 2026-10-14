@@ -14,7 +14,9 @@ observations and examples.
 | `index.html` | Landing page: introduction and the A/B/C/D topic list |
 | `open-conjectures.html` | A. Open Conjectures — each in its own card, with a "More information" drop-down |
 | `open-questions.html` | B. Open Questions — same layout, plus related MathOverflow problems |
-| `index.html` (script at the bottom) | C. New Results and D. Observations — currently "Content coming soon" pop-ups |
+| `index.html` (script at the bottom) | C. New Results — currently a "Content coming soon" pop-up |
+| `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick |
+| `assets/docs/` | PDFs attached to entries (currently Enomoto's note) |
 | `css/style.css` | Shared stylesheet |
 | `assets/images/profile.jpg` | Sidebar photo |
 
@@ -37,6 +39,8 @@ its pull request page. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
   block in `open-conjectures.html` or `open-questions.html`, paste it in the right
   (chronological) position, and edit the title, meta line, setting, statement and drop-down.
   Give the drop-down button and its panel a new matching id (for example `info-9`).
-* **New Results / Observations:** edit the `brickLodgeContent` object at the bottom of
-  `index.html`; each entry's `body` accepts plain HTML.
+* **A new observation:** copy the card in `observations.html`, paste it below the last one, renumber it,
+  and give its drop-down button/panel a new matching id (for example `o-info-2`).
+* **New Results:** edit the `brickLodgeContent` object at the bottom of `index.html`; each entry's `body`
+  accepts plain HTML.
 * **References:** always hyperlink them (arXiv and journal versions where available).
