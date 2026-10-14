@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comments &amp; Feedback — Brick Lodge</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner" id="topnav-inner">
+    <a class="brand" href="https://kaveh-mousavand.github.io/">Kaveh Mousavand</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <ul class="navlinks">
+      <li><a href="https://kaveh-mousavand.github.io/">Home</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/research.html">Research &amp; Events</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/misc.html">Miscellaneous</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/fdb-applet.html">FDB Applet</a></li>
+      <li><a href="index.html" class="active">Brick Lodge</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="shell">
+  <aside class="sidebar">
+    <img class="avatar" src="assets/images/profile.jpg" alt="Kaveh Mousavand">
+    <h2>Kaveh Mousavand</h2>
+    <p class="field">Mathematician</p>
+    <p class="role">Staff Scientist</p>
+    <p class="org"><a href="https://www.oist.jp/" target="_blank" rel="noopener noreferrer">OIST, Okinawa, Japan</a></p>
+    <ul class="sidebar-links">
+      <li><a href="https://scholar.google.com/citations?user=8kGHQqMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/mousavand_k_1" target="_blank" rel="noopener noreferrer">arXiv</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+      <li><a href="https://kaveh-mousavand.github.io/assets/docs/research-statement.pdf" target="_blank" rel="noopener noreferrer">Research statement</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <a class="back-link" id="back-to-obs" href="observations.html">&larr; Back to Observations</a>
+    <h1>Comments &amp; Feedback</h1>
+    <p class="subtitle" id="obs-label">Observations</p>
+
+    <div class="card" id="not-active" hidden>
+      <p>The comment form has not been activated yet. Please check back soon, or contact <a href="https://kaveh-mousavand.github.io/">Kaveh Mousavand</a> directly.</p>
+    </div>
+    <div class="card" id="bad-link" hidden>
+      <p>This page needs to be opened from the &ldquo;Comments &amp; Feedback&rdquo; link below an observation. Please go back to the <a href="observations.html">Observations</a> page.</p>
+    </div>
+
+    <form id="feedback-form" class="card feedback-form" novalidate>
+      <p class="form-intro">Your comment will be sent to the maintainer and contributors of the Brick Lodge for review. If it is approved, it will appear beneath the observation under your full name. Your email address is used only to contact you about your comment and is never displayed.</p>
+
+      <label for="full-name">Full name <span class="req">*</span></label>
+      <input type="text" id="full-name" name="name" maxlength="120" autocomplete="name" required>
+
+      <label for="email">Email address <span class="req">*</span></label>
+      <input type="email" id="email" name="email" maxlength="200" autocomplete="email" required>
+
+      <label for="comment">Comment or feedback <span class="req">*</span></label>
+      <textarea id="comment" name="comment" rows="10" required></textarea>
+      <p class="field-note"><span id="word-count" class="word-count">0 / 1000 words</span></p>
+
+      <label for="attachment">Attachment <span class="opt">(optional, up to <span id="max-mb">20</span> MB)</span></label>
+      <input type="file" id="attachment" name="attachment">
+      <p class="field-note" id="file-note"></p>
+
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+      <button type="submit" class="btn" id="submit-btn">Submit comment</button>
+    </form>
+
+    <div class="card" id="thanks" hidden>
+      <h3>Thank you</h3>
+      <p>Thank you for your comment and feedback. It will be posted on the Brick Lodge after review. A confirmation has also been sent to your email address.</p>
+      <p><a href="observations.html" id="thanks-back">&larr; Back to Observations</a></p>
+    </div>
+  </main>
+</div>
+
+<footer class="site-footer">
+  © 2026 Kaveh Mousavand. Built with plain HTML &amp; CSS, hosted on GitHub Pages.
+</footer>
+
+<script src="js/feedback-config.js"></script>
+<script src="js/feedback.js"></script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('topnav-inner').classList.toggle('open');
+});
+
+document.querySelectorAll('.info-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const panel = document.getElementById(btn.getAttribute('data-target'));
+    if (!panel) return;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    if (isOpen) {
+      panel.hidden = true;
+    } else {
+      panel.hidden = false;
+    }
+  });
+});
+</script>
+</body>
+</html>

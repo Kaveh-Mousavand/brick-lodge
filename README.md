@@ -16,6 +16,8 @@ observations and examples.
 | `open-questions.html` | B. Open Questions — same layout, plus related MathOverflow problems |
 | `index.html` (script at the bottom) | C. New Results — currently a "Content coming soon" pop-up |
 | `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick |
+| `feedback.html` | "Comments & Feedback" form opened from each observation (name, email, comment, optional file) |
+| `js/` | `feedback-config.js` (settings and endpoint), `feedback.js` (form), `comments.js` (shows approved comments) |
 | `assets/docs/` | PDFs attached to entries (currently Enomoto's note) |
 | `css/style.css` | Shared stylesheet |
 | `assets/images/profile.jpg` | Sidebar photo |
@@ -41,6 +43,11 @@ its pull request page. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
   Give the drop-down button and its panel a new matching id (for example `info-9`).
 * **A new observation:** copy the card in `observations.html`, paste it below the last one, renumber it,
   and give its drop-down button/panel a new matching id (for example `o-info-2`).
+* **A new observation also needs:** a `<div class="comments-block" data-obs="obs-2">` below its card
+  (copy the one under Observation 1) and one more line in `js/feedback-config.js` giving its title.
+* **Comments & Feedback:** visitors' comments are emailed to the maintainer and contributors and appear
+  under the observation only after approval. The service runs in the maintainer's Google account (Apps
+  Script); its code is deliberately **not** stored in this public repository.
 * **New Results:** edit the `brickLodgeContent` object at the bottom of `index.html`; each entry's `body`
   accepts plain HTML.
 * **References:** always hyperlink them (arXiv and journal versions where available).
