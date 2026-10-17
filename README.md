@@ -15,7 +15,7 @@ observations and examples.
 | `open-conjectures.html` | A. Open Conjectures — each in its own card, with a "More information" drop-down |
 | `open-questions.html` | B. Open Questions — same layout, plus related MathOverflow problems |
 | `index.html` (script at the bottom) | C. New Results — currently a "Content coming soon" pop-up |
-| `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick |
+| `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick; Observation 2 is the Enomoto–Marczinzik AI-constructed counterexample to the Auslander–Reiten conjecture and its link with the boundedness conjecture |
 | `feedback.html` | "Comments & Feedback" form opened from each observation (name, email, comment, optional file) |
 | `js/` | `feedback-config.js` (settings and endpoint), `feedback.js` (form), `comments.js` (shows approved comments) |
 | `assets/docs/` | PDFs attached to entries (currently Enomoto's note) |
