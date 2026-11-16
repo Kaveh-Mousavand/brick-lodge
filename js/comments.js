@@ -1,4 +1,4 @@
-// "Comments & Feedback" drop-down of each observation.
+// "Comments & Feedback" drop-down of each observation (Observations page) and result (Results page).
 //  - Before the Google service is connected (no endpoint in feedback-config.js) the drop-down shows
 //    the "not activated yet" message that is already in the HTML.
 //  - Once an endpoint is set, it shows the approved comments, a count on the button, and a button

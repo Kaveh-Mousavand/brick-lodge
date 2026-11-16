@@ -48,18 +48,10 @@
     <ul class="brick-list">
       <li><a class="brick-item" href="open-conjectures.html">A. Open Conjectures</a></li>
       <li><a class="brick-item" href="open-questions.html">B. Open Questions</a></li>
-      <li><button type="button" class="brick-item" data-modal="results">C. New Results</button></li>
+      <li><a class="brick-item" href="results.html">C. New Results</a></li>
       <li><a class="brick-item" href="observations.html">D. Observations</a></li>
     </ul>
   </main>
-</div>
-
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal-box" id="modal-box">
-    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-    <h3 id="modal-title"></h3>
-    <div id="modal-body"></div>
-  </div>
 </div>
 
 <footer class="site-footer">
@@ -71,42 +63,8 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('topnav-inner').classList.toggle('open');
 });
 
-// Brick Lodge popup for C. "A. Open Conjectures", "B. Open Questions" and
-// "D. Observations" are their own pages (open-conjectures.html,
-// open-questions.html, observations.html). To
-// add content later, just edit the "body" string for the relevant key below.
-const brickLodgeContent = {
-  results: {
-    title: "C. New Results",
-    body: "<p>Content coming soon.</p>"
-  }
-};
-
-const modalOverlay = document.getElementById('modal-overlay');
-const modalTitle = document.getElementById('modal-title');
-const modalBody = document.getElementById('modal-body');
-
-document.querySelectorAll('.brick-item[data-modal]').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const key = btn.getAttribute('data-modal');
-    const entry = brickLodgeContent[key];
-    if (!entry) return;
-    modalTitle.textContent = entry.title;
-    modalBody.innerHTML = entry.body;
-    modalOverlay.classList.add('open');
-  });
-});
-
-function closeBrickModal() {
-  modalOverlay.classList.remove('open');
-}
-document.getElementById('modal-close').addEventListener('click', closeBrickModal);
-modalOverlay.addEventListener('click', function(e) {
-  if (e.target === modalOverlay) closeBrickModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeBrickModal();
-});
+// All four sections are their own pages: open-conjectures.html, open-questions.html,
+// results.html and observations.html.
 </script>
 </body>
 </html>

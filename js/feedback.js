@@ -9,24 +9,37 @@
   var obs = params.get('obs') || '';
   var titles = CFG.observations || {};
   var title = titles[obs] || '';
-  var num = (obs.match(/^obs-(\d+)$/) || [])[1];
+  var m = obs.match(/^(obs|res)-(\d+)$/) || [];
+  var isRes = m[1] === 'res';
+  var num = m[2];
+  var pageFile = isRes ? 'results.html' : 'observations.html';
+  var pageName = isRes ? 'Results' : 'Observations';
+  var itemName = isRes ? 'Result' : 'Observation';
 
   var $ = function (id) { return document.getElementById(id); };
   if ($('max-mb')) $('max-mb').textContent = MAX_MB;
   var form = $('feedback-form'), status = $('form-status'), submit = $('submit-btn');
   var back = $('back-to-obs');
-  if (back) back.setAttribute('href', 'observations.html' + (obs ? '#' + obs : ''));
+  if (back) {
+    back.setAttribute('href', pageFile + (obs ? '#' + obs : ''));
+    back.innerHTML = '&larr; Back to ' + pageName;
+  }
+  var tb = $('thanks-back');
+  if (tb) {
+    tb.setAttribute('href', pageFile + (obs ? '#' + obs : ''));
+    tb.innerHTML = '&larr; Back to ' + pageName;
+  }
 
   $('obs-label').textContent = num
-    ? 'Observation ' + num + (title ? ': ' + title : '')
-    : 'Observations';
+    ? itemName + ' ' + num + (title ? ': ' + title : '')
+    : 'Observations and Results';
 
   if (!CFG.endpoint) {
     $('not-active').hidden = false;
     form.hidden = true;
     return;
   }
-  if (!/^obs-\d{1,3}$/.test(obs)) {
+  if (!/^(obs|res)-\d{1,3}$/.test(obs)) {
     $('bad-link').hidden = false;
     form.hidden = true;
     return;

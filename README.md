@@ -14,11 +14,11 @@ observations and examples.
 | `index.html` | Landing page: introduction and the A/B/C/D topic list |
 | `open-conjectures.html` | A. Open Conjectures — each in its own card, with a "More information" drop-down |
 | `open-questions.html` | B. Open Questions — same layout, plus related MathOverflow problems |
-| `index.html` (script at the bottom) | C. New Results — currently a "Content coming soon" pop-up |
+| `results.html` | C. New Results — same card layout as the Observations page; Result 1 is "On E-Symmetric Algebras and brick-Brauer–Thrall Conjectures" (K. Mousavand with GPT-6, November 2026) |
 | `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick; Observation 2 is the Enomoto–Marczinzik AI-constructed counterexample to the Auslander–Reiten conjecture and its link with the boundedness conjecture |
-| `feedback.html` | "Comments & Feedback" form opened from each observation (name, email, comment, optional file) |
+| `feedback.html` | "Comments & Feedback" form opened from each observation or result (name, email, comment, optional file) |
 | `js/` | `feedback-config.js` (settings and endpoint), `feedback.js` (form), `comments.js` (shows approved comments) |
-| `assets/docs/` | PDFs attached to entries (currently Enomoto's note) |
+| `assets/docs/` | PDFs attached to entries (Enomoto's note and the E-symmetric algebras note) |
 | `css/style.css` | Shared stylesheet |
 | `assets/images/profile.jpg` | Sidebar photo |
 
@@ -49,6 +49,10 @@ its pull request page. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
   Give the drop-down button and its panel a new matching id (for example `info-9`).
 * **A new observation:** copy the card in `observations.html`, paste it below the last one, renumber it,
   and give its drop-down button/panel a new matching id (for example `o-info-2`).
+* **A new result:** copy the card of Result 1 in `results.html`, paste it below the last one and renumber it.
+  Change `res-1` to `res-2` (card id, `data-obs`, `data-group`, the form link `feedback.html?obs=res-2`), the panel
+  ids `r-info-1`/`r-comments-1` to `r-info-2`/`r-comments-2` (and the matching `data-target`s), and add one line
+  with its title to `js/feedback-config.js`. Observations use ids `obs-N`, results use `res-N`.
 * **A new observation also needs:** its own comments drop-down. Copy the whole card of Observation 1
   (including the two buttons and both panels), then change `obs-1` to `obs-2` (card id, `data-obs`,
   `data-group`, the form link `feedback.html?obs=obs-2`), the panel ids `o-info-1`/`o-comments-1` to
@@ -57,6 +61,4 @@ its pull request page. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 * **Comments & Feedback:** visitors' comments are emailed to the maintainer and contributors and appear
   under the observation only after approval. The service runs in the maintainer's Google account (Apps
   Script); its code is deliberately **not** stored in this public repository.
-* **New Results:** edit the `brickLodgeContent` object at the bottom of `index.html`; each entry's `body`
-  accepts plain HTML.
 * **References:** always hyperlink them (arXiv and journal versions where available).

@@ -650,3 +650,7 @@ footer.site-footer {
 .feedback-form .btn:disabled { opacity: 0.6; cursor: wait; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .card[hidden], .feedback-form[hidden] { display: none; }
+
+/* ---------- Results page ---------- */
+.ul { text-decoration: underline; }
+.conjecture-statement .thm-label { color: var(--slate-deep); }
