@@ -665,3 +665,8 @@ footer.site-footer {
 .diagram-svg a.diag-link { cursor: pointer; }
 .diagram-svg a.diag-link:hover rect, .diagram-svg a.diag-link:focus rect { fill: rgba(25,50,77,0.12); }
 .diagram figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 8px; }
+
+/* caption: 0.8 x previous size (0.85rem -> 0.68rem), no ugly breaks */
+.diagram figcaption { font-size: 0.68rem; line-height: 1.55; text-wrap: pretty; overflow-wrap: normal; word-break: keep-all; hyphens: none; }
+.diagram figcaption .nb { white-space: nowrap; }
+.conjecture-statement .thm-label { display: inline-block; margin-bottom: 4px; }
