@@ -654,3 +654,14 @@ footer.site-footer {
 /* ---------- Results page ---------- */
 .ul { text-decoration: underline; }
 .conjecture-statement .thm-label { color: var(--slate-deep); }
+
+.conjecture-statement.thm { font-weight: 400; }
+.conjecture-statement .thm-label { font-weight: 700; color: var(--slate-deep); }
+.info-panel .main-result.summary p { margin: 0 0 10px; }
+.info-panel .main-result.summary p:last-child { margin-bottom: 0; }
+.diagram { margin: 4px 0 18px; }
+.diagram-box { background: #FFFFFF; border: 1px solid var(--rule); border-radius: 6px; padding: 12px; }
+.diagram-svg { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
+.diagram-svg a.diag-link { cursor: pointer; }
+.diagram-svg a.diag-link:hover rect, .diagram-svg a.diag-link:focus rect { fill: rgba(25,50,77,0.12); }
+.diagram figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 8px; }

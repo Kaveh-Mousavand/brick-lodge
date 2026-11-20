@@ -18,7 +18,7 @@ observations and examples.
 | `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick; Observation 2 is the Enomoto–Marczinzik AI-constructed counterexample to the Auslander–Reiten conjecture and its link with the boundedness conjecture |
 | `feedback.html` | "Comments & Feedback" form opened from each observation or result (name, email, comment, optional file) |
 | `js/` | `feedback-config.js` (settings and endpoint), `feedback.js` (form), `comments.js` (shows approved comments) |
-| `assets/docs/` | PDFs attached to entries (Enomoto's note and the E-symmetric algebras note) |
+| `assets/docs/` | PDFs attached to entries (Enomoto's note, the E-symmetric algebras note and its implications diagram) |
 | `css/style.css` | Shared stylesheet |
 | `assets/images/profile.jpg` | Sidebar photo |
 
