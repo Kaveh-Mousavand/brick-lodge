@@ -12,13 +12,13 @@ observations and examples.
 | File | What it contains |
 |---|---|
 | `index.html` | Landing page: introduction and the A/B/C/D topic list |
-| `open-conjectures.html` | A. Open Conjectures — each in its own card, with a "More information" drop-down |
+| `open-conjectures.html` | A. Open Conjectures — each in its own card, with a "More information" drop-down; at the bottom, the inline SVG diagram of implications among the bBT conjectures (its labels are clickable; source PDF in `assets/docs/`) |
 | `open-questions.html` | B. Open Questions — same layout, plus related MathOverflow problems |
 | `results.html` | C. New Results — same card layout as the Observations page; Result 1 is "On E-Symmetric Algebras and brick-Brauer–Thrall Conjectures" (K. Mousavand with GPT-6, November 2026) |
 | `observations.html` | D. Observations — same card layout; Observation 1 is Enomoto's AI-constructed infinite rigid semibrick; Observation 2 is the Enomoto–Marczinzik AI-constructed counterexample to the Auslander–Reiten conjecture and its link with the boundedness conjecture |
 | `feedback.html` | "Comments & Feedback" form opened from each observation or result (name, email, comment, optional file) |
 | `js/` | `feedback-config.js` (settings and endpoint), `feedback.js` (form), `comments.js` (shows approved comments) |
-| `assets/docs/` | PDFs attached to entries (Enomoto's note, the E-symmetric algebras note and its implications diagram) |
+| `assets/docs/` | PDFs attached to entries (Enomoto's note, the E-symmetric algebras note and its implications diagram, and the bBT implications diagram) |
 | `css/style.css` | Shared stylesheet |
 | `assets/images/profile.jpg` | Sidebar photo |
 
